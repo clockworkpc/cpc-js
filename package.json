@@ -1,51 +1,40 @@
 {
   "name": "cpc-js",
   "version": "1.0.0",
-  "description": "The personal JS toolbox of Alexander JK Garber",
-  "main": "index.js",
+  "description": "The personal JS toolkit of Alexander JK Garber",
+  "main": "bin/www",
+  "repository": "git@github.com:clockworkpc/cpc-js",
+  "author": "Alexander JK Garber <clockworkpc@gmail.com>",
+  "license": "GPLv3",
+  "private": true,
   "scripts": {
-    "start": "nodemon ./index.js --exec babel-node -e js",
-    "test": "mocha"
+    "eslint": "eslint",
+    "debug": "cross-env DEBUG=nadia:* nodemon",
+    "start": "node bin/www",
+    "test": "mocha --recursive"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/clockworkpc/cpc-js.git"
-  },
-  "author": "Alexander JK Garber",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/clockworkpc/cpc-js/issues"
-  },
-  "homepage": "https://github.com/clockworkpc/cpc-js#readme",
   "dependencies": {
     "basic-auth": "^1.1.0",
-    "body-parser": "^1.19.0",
     "body-parser": "~1.17.1",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.3",
-    "express": "^4.17.1",
+    "eslint": "^6.8.0",
     "express": "~4.15.2",
     "joi": "^10.6.0",
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
-    "mongodb": "^3.4.1",
-    "mongoose": "^5.8.7",
     "morgan": "~1.8.1",
     "node-env": "^0.1.6",
-    "nodemon": "^2.0.2",
     "pug": "^2.0.0-rc.2",
-    "request-promise": "^4.2.5",
-    "request": "^2.88.0",
     "serve-favicon": "~2.4.2",
     "sqlite": "^2.8.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-stage-0": "^6.24.1",
     "chai": "^4.2.0",
     "cross-env": "^5.0.1",
     "mocha": "^7.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "sinon": "^8.1.0",
+    "sinon-chai": "^3.4.0"
   }
 }
